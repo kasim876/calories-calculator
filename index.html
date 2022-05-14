@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор калорий</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/select.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/select.js" defer></script>
+</head>
+<body>
+  <section class="calculator">
+    <div class="container">
+      <div class="calculator__content">
+        <h1 class="title calculator__title">Рассчитать дневную норму калорий</h1>
+        <form action="#" class="calculator-form">
+          <label class="calculator-form__row">
+            <span class="calculator-form__caption">Ваш возраст</span>
+            <input type="number" class="calculator-form__input input-age input-reset" min="13" max="80" required>
+            <span class="calculator-form__units">лет</span>
+          </label>
+          <label class="calculator-form__row">
+            <span class="calculator-form__caption">Ваш вес</span>
+            <input type="number" class="calculator-form__input input-weight input-reset" min="0" max="150" required>
+            <span class="calculator-form__units">килограмм</span>
+          </label>
+          <label class="calculator-form__row">
+            <span class="calculator-form__caption">Ваш рост</span>
+            <input type="number" class="calculator-form__input input-height input-reset" min="0" max="200" required>
+            <span class="calculator-form__units">сантиметр</span>
+          </label>
+          <div class="calculator-form__row">
+            <label class="calculator-form__radio-box">
+              <span class="calculator-form__caption">Женщина</span>
+              <input type="radio" class="input-gender" name="gender" value="woman">
+            </label>
+            <label class="calculator-form__radio-box">
+              <span class="calculator-form__caption">Мужчина</span>
+              <input type="radio" class="input-gender" name="gender" value="man">
+            </label>
+          </div>
+          <div class="calculator-form__row">
+            <span class="calculator-form__caption">Степень физической нагрузки</span>
+            <div class="select">
+              <div class="select__header">
+                <span class="select__current" data-value="1.2">Нет физической нагрузки</span>
+                <div class="select__icon" role="img"></div> 
+              </div>
+              <div class="select__body">
+                <div class="select__item" data-value="1.2">Нет физической нагрузки</div>
+                <div class="select__item" data-value="1.375">Спорт 3 раза в неделю</div>
+                <div class="select__item" data-value="1.55">Спорт 5 раза в неделю</div>
+                <div class="select__item" data-value="1.725">Ежедневные занятия спортом</div>
+                <div class="select__item" data-value="1.9">Ежедневные занятия спортом, дважды в день</div>
+              </div>
+            </div>
+          </div>
+          <button class="calculator-form__btn btn-reset" type="button">Рассчитать</button>
+        </form>
+        <div class="results">
+          <div class="results__left">
+            <p class="results__caption">Ваша норма калорий на день</p>
+            <p class="results__caption">Норма калорий для похудения</p>
+            <p class="results__caption">Норма калорий для набора веса</p>
+          </div>
+          <div class="results__right">
+            <p class="results__value results__value_normal"><span></span> ккал</p>
+            <p class="results__value results__value_thin"><span></span> ккал</p>
+            <p class="results__value results__value_fat"><span></span> ккал</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
